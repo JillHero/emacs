@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ find-function
+ customize-group
  nodejs-repl
  master-mode
- customize-group
  package-install
  package-list-packages
  package-autoremove
- customize
 )
 
 ;; ----- smex-data -----
@@ -18,7 +18,8 @@
  (package-autoremove . 1)
  (package-list-packages . 1)
  (package-install . 1)
- (customize-group . 2)
+ (customize-group . 5)
  (master-mode . 1)
  (nodejs-repl . 1)
+ (find-function . 1)
 )

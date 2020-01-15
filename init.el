@@ -15,7 +15,6 @@
 		company
 		;; --- Better Editor ---
 		hungry-delete
-		swiper
 		counsel
 		smartparens
 		;; --- Major Mode ---
@@ -24,14 +23,10 @@
 		nodejs-repl
 		exec-path-from-shell
 		;; --- Themes ---
-		monokai-theme
 		;; solarized-theme
 		monokai-theme
-
-		hungry-delete
 		smex
 		swiper
-		smartparens
 		nodejs-repl
 		exec-path-from-shell
 	       
@@ -68,7 +63,7 @@
     (interactive)
     (find-file "~/.emacs.d/init.el"))
     
-;; 把函数open-init-file绑定到快捷键<F2>键上
+;; 把函数open-init-file绑定到快捷键<F1>键上
 (global-set-key (kbd "<f1>") 'open-init-file)
 
 ;; 把光标设定为条
@@ -94,10 +89,13 @@
 (global-hl-line-mode t)
 (load-theme 'monokai t)
 
+
+(global-auto-revert-mode t)
+;; 取消自动保存
+(setq auto-save-default nil)
 ;; 饥饿删除
 ;;(require 'hungry-delete)
-;;(global-hungry-delete-mode)
-
+;;(global-hungry-delete-mode)(require 'popwin)
 ;; 查找
 (require 'smartparens-config)
 (add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
@@ -130,7 +128,8 @@
 (global-set-key (kbd "<f6>") 'ivy-resume)
 (global-set-key (kbd "M-x") 'counsel-M-x)
 (global-set-key (kbd "C-x C-f") 'counsel-find-file)
-
+(setq org-agenda-files '("~/emacs_file"))
+ (global-set-key (kbd "C-c a") 'org-agenda)
 
 
 
@@ -139,6 +138,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(company-idle-delay 0.1)
  '(company-minimum-prefix-length 1)
  '(custom-safe-themes
    (quote
