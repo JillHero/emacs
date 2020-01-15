@@ -1,0 +1,12 @@
+* emacs hotkey
+c = control
+m = option
+
+c-x c-f 打开文件，如果没有文件就新建文件
+c-x c-s 保存
+c-x c-r 打开最近文件
+c-s 搜索
+m-g g 跳转行
+m-return 纠正序号
+c-k 删除整行
+c-y 恢复
