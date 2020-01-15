@@ -29,7 +29,7 @@
 		swiper
 		nodejs-repl
 		exec-path-from-shell
-	       
+	        popwin
 
 	       
 		) "Default packages")
@@ -131,7 +131,8 @@
 (setq org-agenda-files '("~/emacs_file"))
  (global-set-key (kbd "C-c a") 'org-agenda)
 
-
+(require 'popwin)
+(popwin-mode t)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
